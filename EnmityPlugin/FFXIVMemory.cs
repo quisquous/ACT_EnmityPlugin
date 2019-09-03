@@ -392,8 +392,7 @@ namespace Tamagawa.EnmityPlugin
                     combatant.Level = p[offset + 66];
 
                     // Status aka Buff,Debuff
-                    combatant.Statuses = new List<Status>();
-                    const int StatusEffectOffset = 6292 + 208 + 16; //TODO: unsure, seems to line up in memory
+                    const int StatusEffectOffset = 6292 + 196 + 16;
                     const int statusSize = 12;
 
                     int statusCountLimit = 60;
@@ -401,6 +400,9 @@ namespace Tamagawa.EnmityPlugin
 
                     var statusesSource = new byte[statusCountLimit * statusSize];
                     Buffer.BlockCopy(source, StatusEffectOffset, statusesSource, 0, statusCountLimit * statusSize);
+
+                    combatant.Statuses = new List<Status>();
+
                     for (var i = 0; i < statusCountLimit; i++)
                     {
                         var statusBytes = new byte[statusSize];
@@ -423,10 +425,10 @@ namespace Tamagawa.EnmityPlugin
                     // Cast
                     combatant.Casting = new Cast
                     {
-                        ID = *(short*)&p[6900 + 16],
-                        TargetID = *(uint*)&p[6912 + 16],
-                        Progress = *(Single*)&p[6948 + 16],
-                        Time = *(Single*)&p[6952 + 16],
+                        ID = *(short*)&p[7236 + 16],
+                        TargetID = *(uint*)&p[7248 + 16],
+                        Progress = *(Single*)&p[7280 + 16],
+                        Time = *(Single*)&p[7284 + 16],
                     };
                 }
                 else
