@@ -379,7 +379,7 @@ namespace Tamagawa.EnmityPlugin
 
                 combatant.TargetID = *(uint*)&p[5832 + 8];
 
-                offset = 5960 + 8;
+                offset = 6292 + 8;
                 if (combatant.type == ObjectType.PC || combatant.type == ObjectType.Monster)
                 {
                     combatant.CurrentHP = *(int*)&p[offset + 8];
@@ -393,7 +393,7 @@ namespace Tamagawa.EnmityPlugin
 
                     // Status aka Buff,Debuff
                     combatant.Statuses = new List<Status>();
-                    const int StatusEffectOffset = 6152 + 16;
+                    const int StatusEffectOffset = 6292 + 196 + 16;
                     const int statusSize = 12;
 
                     int statusCountLimit = 60;
@@ -423,10 +423,10 @@ namespace Tamagawa.EnmityPlugin
                     // Cast
                     combatant.Casting = new Cast
                     {
-                        ID = *(short*)&p[6900 + 16],
-                        TargetID = *(uint*)&p[6912 + 16],
-                        Progress = *(Single*)&p[6948 + 16],
-                        Time = *(Single*)&p[6952 + 16],
+                        ID = *(short*)&p[7236 + 16],
+                        TargetID = *(uint*)&p[7248 + 16],
+                        Progress = *(Single*)&p[7280 + 16],
+                        Time = *(Single*)&p[7284 + 16],
                     };
                 }
                 else
