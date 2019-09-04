@@ -121,8 +121,10 @@ namespace Tamagawa.EnmityPlugin
         AST, // 33
         SAM, // 34
         RDM, // 35
-        BLU  // 36
-    }
+        BLU, // 36
+        GNB, // 37
+        DNC, // 38
+  }
 
     //// 敵視されてるキャラエントリ
     public class EnmityEntry
