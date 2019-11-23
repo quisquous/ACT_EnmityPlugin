@@ -1,21 +1,10 @@
 # EnmityPlugin
 
-現在のターゲットの敵視量、距離、HP等をオーバーレイ表示する、[OverlayPlugin](https://github.com/hibiyasleep/OverlayPlugin) のアドオンです。 
+This plugin has been deprecated.
 
-![sample](https://raw.githubusercontent.com/TamanegiMage/ACT_EnmityPlugin/master/sample.png) 
+The [ngld OverlayPlugin](https://github.com/ngld/OverlayPlugin/) now includes enmity data.
+You cannot use old enmity overlay html files with the new ngld OverlayPlugin.
+However, its release include new replacement enmity overlays that should have everything
+the old ones did.
 
-## サンプルイメージ
-
-![sample](https://raw.githubusercontent.com/TamanegiMage/ACT_EnmityPlugin/master/sample_emity_absolute.jpg) 
-![sample](https://raw.githubusercontent.com/TamanegiMage/ACT_EnmityPlugin/master/sample_enmity_relative.jpg) 
-![sample](https://raw.githubusercontent.com/TamanegiMage/ACT_EnmityPlugin/master/sample_aggrolist.jpg) 
-
-## ダウンロード
-
-[リリースページ](https://github.com/TamanegiMage/ACT_EnmityPlugin/releases)よりダウンロードできます。
-
-また、[OverlayPlugin](https://github.com/hibiyasleep/OverlayPlugin) のアドオンとして動作するため、 [OverlayPlugin](https://github.com/hibiyasleep/OverlayPlugin) の導入が必要です。
-
-## ドキュメント
-
-インストールや使い方は [Wiki](https://github.com/TamanegiMage/ACT_EnmityPlugin/wiki) を参照してください。
+Please install and use that instead.
